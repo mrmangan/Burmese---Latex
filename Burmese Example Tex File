@@ -1,0 +1,54 @@
+%!TEX TS-program = xelatex
+
+\documentclass[12pt]{article}
+
+
+\usepackage{newunicodechar}
+\usepackage{fontspec}
+% make new environment
+\newenvironment{bur}{\setmainfont{Myanmar Text}}
+
+\begin{document}
+	
+	\section{Burmese Letters}
+	Use these packages and make new environment listed above. 
+	
+	The first line is " TEX TS-program = xelatex ' is necessary to get the packages to work.
+	
+	Demonstrate letters to use in text: 
+	
+	$\textnormal{\begin{bur}	မ  \end{bur}}$ 
+	$\textnormal{\begin{bur} က \end{bur}}$
+	$\textnormal{\begin{bur}ဌ\end{bur}}$
+	$\textnormal{\begin{bur} ဈ \end{bur}}$
+	$\textnormal{\begin{bur} လ \end{bur}}$
+	
+	Here is an example of how to insert a Burmese letter $\textnormal{\begin{bur} လ \end{bur}}$ in the middle of English text.
+	
+	You need to include the "textnormal" command to start a new environment.
+	
+	Use in an equation: 
+	\begin{equation}
+	\label{eq10}
+	m_i = \textnormal{\begin{bur}	မ  \end{bur}} \times z_i + \textnormal{\begin{bur}	ဗ  \end{bur}}
+	\end{equation}
+	
+	Use in a table: 
+	
+\begin{table}
+	\caption{Calibration coefficients for VACE and EBLE experiments for the coherent structure identification technique}
+	\label{tab:1}       
+	\begin{tabular}{lllllll}
+		\hline\noalign{\smallskip}
+		& \begin{bur}	မ  \end{bur} & \begin{bur}
+			ဗ
+		\end{bur} & $\mu$ & $\beta$ & m & b \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		VACE & -0.11 & 1.1 & 0 & 2.05 & 124.64 & -1.61 \\
+		EBLE & 0 & 0.98 & 0 & 0.02 & 105.06 & -7.57 \\
+		\noalign{\smallskip}\hline
+	\end{tabular}
+\end{table}
+
+	
+\end{document}
